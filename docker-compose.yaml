@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  # service 1 : database
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "1"
+      MYSQL_DATABASE: bananadesign
+      MYSQL_USER: exampleuser
+      MYSQL_PASSWORD: bananapass
+    volumes:
+      - ./db:/var/lib/mysql
+      - ./schema/:/docker-entrypoint-initdb.d
+
+  # service 2 : wordpress
+  #wordpress: # previous my dockerfile 
+    #image: wordpress:latest # previous my dockerfile
+  webserver:
+    build: . # dot means "create an image based on dockerfile at the root of this file"
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: exampleuser
+      WORDPRESS_DB_PASSWORD: bananapass
+      WORDPRESS_DB_NAME: bananadesign
+    volumes:
+      - ./wordpress:/var/www/html
+
+  # service 3 : phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - 8081:80
+
+volumes:
+  wordpress:
+  db:
