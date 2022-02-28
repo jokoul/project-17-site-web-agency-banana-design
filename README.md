@@ -9,5 +9,7 @@
 ### Project goal
 
 This project allowed me to : 
-    - use the latest version of wordpress and many useful plugins
-    - manipulate docker-compose by creating dockerfile, docker-compose.yaml and running different container based on public image like php, mysql, wordpress, etc.
+
+    1. use the latest version of wordpress and many useful plugins
+
+    2. manipulate docker-compose by creating dockerfile, docker-compose.yaml and running different container based on public image like php, mysql, wordpress, etc.
