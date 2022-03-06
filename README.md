@@ -1,6 +1,6 @@
 # project-WP-DR-01-wordpress-docker-showcase-site-web-agency-banana-design
 
-## stack 
+## stack
 
     1. wordpress 5.9.1 + plugins (Elementor,SEOPress, WPForms, UpdraftPlus, etc. )
 
@@ -8,8 +8,12 @@
 
 ### Project goal
 
-This project allowed me to : 
+This project allowed me to :
 
     1. use the latest version of wordpress and many useful plugins
 
     2. manipulate docker-compose by creating dockerfile, docker-compose.yaml and running different container based on public image like php, mysql, wordpress, etc.
+
+### Host and Deployment
+
+This website is hosted and deployed with **HOSTINGER**. You can visit it by clicking [HERE](https://joan-kouloumba.in)
